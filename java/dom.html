@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <h1>DOM</h1>
+    <div id="menu">
+        <a href="index.html" class="item_menu">Inicio</a>
+        <a href="eventos.html" class="item_menu">Eventos</a>
+        <a href="css.html" class="item_menu">CSS</a>
+        <a href="form.html" class="item_menu">Form</a>
+        <a href="funciones.html" class="item_menu">Funciones</a>
+        <a href="location.html" class="item_menu">Location</a>
+        <a href="windows.html" class="item_menu">Windows</a>
+        <a href="dom.html" class="item_menu">Dom</a>
+    </div>
+    <h2>Manipulación del DOM</h2>
+    <div id="div1">Texto inicial</div>
+    <button id="cambiar_inner">Cambiar InnerHTML</button>
+    <button id="agregar_contenido">Agregar Contenido</button>
+    <button id="eliminar_contenido">Eliminar Contenido</button>
+    <script>
+        
+       
+       const div1 = document.getElementById("div1");
+
+       document.getElementById("cambiar_inner").addEventListener("click", function() {
+           div1.innerHTML = "Hola <br>";
+       });
+
+       
+       document.getElementById("agregar_contenido").addEventListener("click", function() {
+           const nuevoElemento = document.createElement("p");
+           nuevoElemento.textContent = "Como Están";
+           div1.append(nuevoElemento);
+       });
+
+       
+       document.getElementById("eliminar_contenido").addEventListener("click", function() {
+           div1.innerHTML = ""; 
+       });
+    </script>
+</body>
+</html>

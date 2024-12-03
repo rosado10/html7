@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulación DOM</title>
+    <link rel="stylesheet" href="estilos.css">
+    <style>
+        .miestilo {
+            padding: 25px;
+            font-family: Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS</h1>
+    <div id="menu">
+        <a href="index.html" class="item_menu">Inicio</a>
+        <a href="eventos.html" class="item_menu">Eventos</a>
+        <a href="css.html" class="item_menu">CSS</a>
+        <a href="form.html" class="item_menu">Form</a>
+        <a href="funciones.html" class="item_menu">Funciones</a>
+        <a href="location.html" class="item_menu">Location</a>
+        <a href="windows.html" class="item_menu">Windows</a>
+        <a href="dom.html" class="item_menu">Dom</a>
+    </div>
+
+    <div id="midiv">Hola</div>
+
+    <input type="button" value="Cambiar Fondo" id="cambiar_fondo">
+    <input type="button" value="Cambiar Color" id="cambiar_color">
+    <input type="button" value="Agregar Borde" id="agregar_borde">
+    <input type="button" value="Agregar Negrita" id="agregar_negrita">
+    <input type="button" value="Agregar Clase" id="agregar_clase">
+    <input type="button" value="Quitar Clase" id="quitar_clase">
+
+    <script>
+        document.getElementById("cambiar_fondo").addEventListener("click", function() {
+            document.getElementById("midiv").style.backgroundColor = "green";
+        });
+
+        document.getElementById("cambiar_color").addEventListener("click", function() {
+            document.getElementById("midiv").style.color = "white";
+        });
+
+        document.getElementById("agregar_borde").addEventListener("click", function() {
+            document.getElementById("midiv").style.border = "3px solid black";
+        });
+
+        document.getElementById("agregar_negrita").addEventListener("click", function() {
+            document.getElementById("midiv").style.fontWeight = "bold";
+        });
+
+        document.getElementById("agregar_clase").addEventListener("click", function() {
+            document.getElementById("midiv").classList.add("miestilo");
+        });
+
+        document.getElementById("quitar_clase").addEventListener("click", function() {
+            document.getElementById("midiv").classList.remove("miestilo");
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <h1>FORM</h1>
+    <div id="menu">
+        <a href="index.html" class="item_menu">Inicio</a>
+        <a href="eventos.html" class="item_menu">Eventos</a>
+        <a href="css.html" class="item_menu">CSS</a>
+        <a href="form.html" class="item_menu">Form</a>
+        <a href="funciones.html" class="item_menu">Funciones</a>
+        <a href="location.html" class="item_menu">Location</a>
+        <a href="windows.html" class="item_menu">Windows</a>
+        <a href="DOW.html" class="item_menu">Dom</a>
+    </div>
+    <h2>Formulario con Eventos</h2>
+    <form id="formulario">
+        <label for="vehiculo">Seleccione un vehículo:</label>
+        <select id="vehiculo">
+            <option value="carro">Carro</option>
+            <option value="moto">Moto</option>
+            <option value="bicicleta">Bicicleta</option>
+        </select>
+        <button type="button" id="mostrar_seleccion">Mostrar Selección</button>
+    </form>
+    <div id="mostrar"></div>
+    <script>
+        const vehiculo = document.getElementById("vehiculo");
+        const mostrar = document.getElementById("mostrar");
+
+        document.getElementById("mostrar_seleccion").addEventListener("click", function() {
+            const seleccion = vehiculo.value;
+            mostrar.innerHTML = `Has seleccionado: <b>${seleccion}</b>`;
+        });
+
+    </script>
+</body>
+</html>
